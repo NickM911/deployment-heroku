@@ -17,12 +17,12 @@
 
      <!-- Form to enter new data for predictions  -->
     <form action="{{ url_for('predict')}}"method="POST">
-      <input type="text" name="age" placeholder="Age" required="required" /><br>
-    	<input type="text" name="sex" placeholder="Sex" required="required" /><br>
-        <input type="text" name="bmi" placeholder="BMI" required="required" /><br>
-        <input type="text" name="children" placeholder="Children" required="required" /><br>
-        <input type="text" name="smoker" placeholder="Smoker" required="required" /><br>
-        <input type="text" name="region" placeholder="Region" required="required" /><br>
+	<input type="text" name="age" placeholder="Age" value="{{ request.form['age'] }}" required="required" /><br>
+    	<input type="text" name="sex" placeholder="Sex" value="{{ request.form['sex'] }}" required="required" /><br>
+        <input type="text" name="bmi" placeholder="BMI" value="{{ request.form['bmi'] }}" required="required" /><br>
+        <input type="text" name="children" placeholder="Children" value="{{ request.form['children'] }}" required="required" /><br>
+        <input type="text" name="smoker" placeholder="Smoker" value="{{ request.form['smoker'] }}" required="required" /><br>
+        <input type="text" name="region" placeholder="Region" value="{{ request.form['region'] }}" required="required" /><br> 
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
